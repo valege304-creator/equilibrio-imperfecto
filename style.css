@@ -1,0 +1,660 @@
+html{
+    background-color: #f7f3ea;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f7f3ea;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+nav{
+    background-color: #fcfaf5;
+    width: 100%;
+    padding: 18px;
+    display: flex;
+    justify-content: space-around;
+
+    border-bottom: 1px solid #e3dacb;
+}
+nav a{
+    font-family: 'Work Sans', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #3d3530;
+    text-decoration: none;
+
+    padding: 0 20px;
+    border-right: 1px solid #d9c9a7;
+
+    transition: transform 0.2s ease;
+}
+nav a:last-child{
+    border-right: none;
+}
+nav a:hover{
+    transform: scale(1.1);
+    color: #b5603e;
+}
+
+
+
+
+/* TEXTOS (IGUALES EN TODAS LAS PAGINAS) */
+
+h1{
+    font-family: 'Cormorant Garamond', Cambria, Georgia, serif;
+    font-size: 5rem;
+    font-weight: 300;
+    color: #3d3530;
+    text-align: center;
+    letter-spacing: 4px;
+
+    margin-top: 70px;
+    margin-bottom: 5px;
+}
+
+h2{
+    font-family: 'Work Sans', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #9a7552;
+    text-align: center;
+    letter-spacing: 6px;
+
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+h2:after{
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    background-color: #c49a35;
+    margin: 18px auto 0 auto;
+}
+
+p{
+    width: 75%;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+
+    font-family: 'Work Sans', Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #3d3530;
+    text-align: justify;
+}
+
+h3{
+    width: 75%;
+    max-width: 900px;
+    margin: 70px auto 20px auto;
+
+    font-family: 'Cormorant Garamond', Cambria, Georgia, serif;
+    font-size: 2.3rem;
+    font-weight: 400;
+    color: #3d3530;
+    letter-spacing: 3px;
+
+    border-bottom: 2px solid #c49a35;
+    padding-bottom: 10px;
+}
+
+h4{
+    width: 75%;
+    max-width: 900px;
+    margin: 15px auto 15px auto;
+
+    font-family: 'Work Sans', Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #b5603e;
+    letter-spacing: 3px;
+}
+
+ul{
+    width: 75%;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    padding-left: 20px;
+
+    font-family: 'Work Sans', Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #3d3530;
+}
+ul li::marker{
+    color: #c49a35;
+}
+
+
+/* FRASE DESTACADA */
+
+.destacado{
+    font-family: 'Cormorant Garamond', Cambria, Georgia, serif;
+    font-size: 2rem;
+    font-style: italic;
+    line-height: 1.3;
+    color: #b5603e;
+    text-align: center;
+
+    margin: 60px auto 60px auto;
+}
+.destacado:before{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #c49a35;
+    margin: 0 auto 20px auto;
+}
+
+
+/* FOTO GRANDE DE CADA PAGINA */
+
+.foto-banda{
+    display: block;
+    width: 85%;
+    max-width: 1000px;
+    height: 380px;
+    margin: 0 auto 50px auto;
+
+    object-fit: cover;
+    border: 10px solid #fcfaf5;
+    border-radius: 4px;
+}
+
+
+/* BOTON PARA DESCARGAR EL PDF */
+
+.boton-descarga{
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+    padding: 14px 34px;
+
+    font-family: 'Work Sans', Arial, sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    color: #ffffff;
+    text-decoration: none;
+
+    background-color: #c49a35;
+    border: 1px solid #c49a35;
+    border-radius: 2px;
+
+    transition: background-color 0.3s ease;
+}
+.boton-descarga:hover{
+    background-color: #b5603e;
+}
+
+
+/* PIE DE PAGINA */
+
+footer{
+    width: 85%;
+    max-width: 1000px;
+    margin: 90px auto 0 auto;
+    padding-top: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    border-top: 1px solid #d9c9a7;
+}
+footer p{
+    width: auto;
+    margin: 0;
+    font-size: 0.85rem;
+    color: #9a7552;
+}
+footer a{
+    color: #b5603e;
+}
+
+
+
+
+/* PAGINA INICIO */
+
+.pagina-inicio{
+    background-image:
+        linear-gradient(rgba(247,243,234,0.82), rgba(247,243,234,0.97)),
+        url(Portada.jpg);
+}
+.pagina-inicio h1{
+    font-size: 5.5rem;
+    margin-top: 60px;
+}
+.foto-portada{
+    display: block;
+    width: 260px;
+    height: auto;
+    margin: 0 auto 0 auto;
+}
+.frase{
+    font-family: 'Cormorant Garamond', Cambria, Georgia, serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #7f9473;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* PILARES */
+
+.pagina-inicio .pilares{
+    width: 85%;
+    max-width: 1000px;
+    margin: 30px auto 30px auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.pagina-inicio .tarjeta{
+    width: 100%;
+    height: 250px;
+    margin: 0;
+    padding: 25px 20px;
+
+    background-color: #fcfaf5;
+    border: 1px solid #e3dacb;
+    border-top: 3px solid #7f9473;
+
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+.pagina-inicio .tarjeta:hover{
+    transform: translateY(-6px);
+}
+.pagina-inicio .tarjeta span{
+    font-family: 'Cormorant Garamond', Cambria, Georgia, serif;
+    font-size: 2.6rem;
+    color: #c49a35;
+}
+.pagina-inicio .tarjeta h4{
+    width: 100%;
+    margin: 10px 0 10px 0;
+}
+.pagina-inicio .tarjeta p{
+    width: 100%;
+    margin: 0;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+/* KINTSUGI */
+
+.pagina-inicio .kintsugi{
+    width: 85%;
+    max-width: 1000px;
+    margin: 30px auto 30px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+.pagina-inicio .kintsugi img{
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border: 10px solid #fcfaf5;
+}
+.pagina-inicio .kintsugi p{
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+
+
+
+/* PAGINA MOVERSE */
+
+.pagina-moverse{
+    background-image:
+        linear-gradient(rgba(247,243,234,0.93), rgba(247,243,234,0.97)),
+        url(Moverse.jpg);
+}
+
+/* RUTINA */
+
+.pagina-moverse .rutina{
+    width: 85%;
+    max-width: 1000px;
+    margin: 30px auto 40px auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.pagina-moverse .paso{
+    width: 100%;
+    height: 170px;
+    padding: 22px;
+
+    background-color: #fcfaf5;
+    border: 1px solid #e3dacb;
+}
+.pagina-moverse .paso span{
+    font-family: 'Cormorant Garamond', Cambria, Georgia, serif;
+    font-size: 2.2rem;
+    color: #c49a35;
+}
+.pagina-moverse .paso h4,
+.pagina-moverse .paso p{
+    width: 100%;
+    margin: 6px 0 0 0;
+    text-align: left;
+}
+
+
+
+
+/* PAGINA COMER */
+
+.pagina-comer{
+    background-image:
+        linear-gradient(rgba(247,243,234,0.93), rgba(247,243,234,0.97)),
+        url(Comer.jpg);
+}
+
+/* PLATO EQUILIBRADO */
+
+.pagina-comer .plato{
+    width: 75%;
+    max-width: 900px;
+    height: 150px;
+    margin: 20px auto 25px auto;
+
+    display: flex;
+    border: 1px solid #e3dacb;
+}
+.pagina-comer .plato div{
+    padding: 18px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    font-family: 'Work Sans', Arial, sans-serif;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+.pagina-comer .plato strong{
+    font-family: 'Cormorant Garamond', Cambria, Georgia, serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.pagina-comer .verduras{
+    flex: 2;
+    background-color: #7f9473;
+}
+.pagina-comer .proteina{
+    flex: 1;
+    background-color: #b5603e;
+}
+.pagina-comer .cereales{
+    flex: 1;
+    background-color: #c49a35;
+}
+
+/* RECETAS */
+
+.pagina-comer .recetas{
+    width: 85%;
+    max-width: 1000px;
+    margin: 30px auto 30px auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.pagina-comer .receta{
+    background-color: #fcfaf5;
+    border: 1px solid #e3dacb;
+    padding-bottom: 20px;
+}
+.pagina-comer .receta img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.pagina-comer .receta h4{
+    width: auto;
+    margin: 18px 20px 8px 20px;
+}
+.pagina-comer .receta p{
+    width: auto;
+    margin: 0 20px 12px 20px;
+    font-size: 0.92rem;
+    text-align: left;
+}
+
+
+
+
+/* PAGINA DESCANSAR */
+
+.pagina-descansar{
+    background-image:
+        linear-gradient(rgba(247,243,234,0.93), rgba(247,243,234,0.97)),
+        url(Descansar.jpg);
+}
+.frase-calma{
+    font-family: 'Cormorant Garamond', Cambria, Georgia, serif;
+    font-size: 2.4rem;
+    font-style: italic;
+    line-height: 1.25;
+    color: #7f9473;
+    text-align: center;
+
+    margin: 60px auto 40px auto;
+}
+
+/* RESPIRACION 4-4-6 */
+
+.pagina-descansar .respiracion{
+    width: 75%;
+    max-width: 900px;
+    margin: 20px auto 30px auto;
+
+    display: flex;
+    gap: 20px;
+}
+.pagina-descansar .respiracion div{
+    flex: 1;
+    padding: 25px 10px;
+
+    text-align: center;
+    font-family: 'Work Sans', Arial, sans-serif;
+    color: #3d3530;
+
+    background-color: #fcfaf5;
+    border: 1px solid #e3dacb;
+    border-radius: 50%;
+}
+.pagina-descansar .respiracion strong{
+    display: block;
+    font-family: 'Cormorant Garamond', Cambria, Georgia, serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: #7f9473;
+}
+
+/* MEDITAR (PNG CON FONDO TRANSPARENTE) */
+
+.pagina-descansar .meditar{
+    display: block;
+    width: 420px;
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto 20px auto;
+}
+
+
+/* GALERIAS DE FOTOS */
+
+.pagina-moverse .galeria-moverse,
+.pagina-descansar .galeria-calma{
+    width: 85%;
+    max-width: 1000px;
+    margin: 30px auto 60px auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.pagina-moverse .galeria-moverse img,
+.pagina-descansar .galeria-calma img{
+    width: 100%;
+    height: 320px;
+
+    object-fit: cover;
+    border: 8px solid #fcfaf5;
+    border-radius: 4px;
+
+    transition: transform 0.3s ease;
+}
+.pagina-moverse .galeria-moverse img:hover,
+.pagina-descansar .galeria-calma img:hover{
+    transform: scale(1.04);
+}
+
+/* SEMANA */
+
+.pagina-descansar .semana{
+    width: 85%;
+    max-width: 1000px;
+    margin: 20px auto 30px auto;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+.pagina-descansar .dia{
+    width: 100%;
+    height: 130px;
+    padding: 15px 10px;
+
+    background-color: #fcfaf5;
+    border: 1px solid #e3dacb;
+}
+.pagina-descansar .dia h4{
+    width: 100%;
+    margin: 0 0 8px 0;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+}
+.pagina-descansar .dia p{
+    width: 100%;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: left;
+}
+.pagina-descansar .domingo{
+    background-color: #e6ebdf;
+}
+
+/* CAJA DE DESCARGA */
+
+.pagina-descansar .descarga{
+    width: 75%;
+    max-width: 900px;
+    margin: 70px auto 0 auto;
+    padding: 40px;
+
+    text-align: center;
+    background-color: #efe7d6;
+    border: 1px solid #d9c9a7;
+}
+.pagina-descansar .descarga p{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
+
+
+/* TRANSICIÓN ENTRE PAGINAS */
+
+body{
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+body.pagina-visible{
+    opacity: 1;
+}
+body.pagina-saliendo{
+    opacity: 0;
+}
+
+
+
+
+/* CELULAR */
+
+@media (max-width: 700px){
+    nav{
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    nav a{
+        font-size: 0.8rem;
+        padding: 0 10px;
+    }
+    h1,
+    .pagina-inicio h1{
+        font-size: 3rem;
+    }
+    p,
+    h3,
+    h4,
+    ul{
+        width: 88%;
+    }
+    .pagina-inicio .pilares,
+    .pagina-moverse .rutina,
+    .pagina-comer .recetas,
+    .pagina-moverse .galeria-moverse,
+    .pagina-descansar .galeria-calma{
+        grid-template-columns: 1fr;
+    }
+    .pagina-inicio .kintsugi{
+        grid-template-columns: 1fr;
+    }
+    .pagina-inicio .tarjeta,
+    .pagina-moverse .paso{
+        height: auto;
+    }
+    .pagina-descansar .semana{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pagina-descansar .respiracion{
+        flex-direction: column;
+    }
+    .foto-banda{
+        height: 230px;
+    }
+    footer{
+        flex-direction: column;
+    }
+}
