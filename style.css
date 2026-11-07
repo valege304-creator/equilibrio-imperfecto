@@ -610,20 +610,81 @@ body.pagina-saliendo{
 
 
 
+/* TABLET */
+
+@media (max-width: 900px){
+    .pagina-inicio .pilares{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pagina-moverse .rutina,
+    .pagina-comer .recetas{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pagina-descansar .semana{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+
+
 /* CELULAR */
 
 @media (max-width: 700px){
+
+    /* FONDO */
+
+    body{
+        background-attachment: scroll;
+        padding-bottom: 40px;
+    }
+
+    /* MENU */
+
     nav{
-        flex-wrap: wrap;
-        gap: 8px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        padding: 14px 10px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 0;
     }
     nav a{
-        font-size: 0.8rem;
-        padding: 0 10px;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        text-align: center;
+        padding: 6px 0;
     }
+    nav a:nth-child(2){
+        border-right: none;
+    }
+    nav a:hover{
+        transform: none;
+    }
+
+    /* TEXTOS */
+
     h1,
     .pagina-inicio h1{
-        font-size: 3rem;
+        font-size: 2.4rem;
+        letter-spacing: 2px;
+        line-height: 1.1;
+        margin-top: 40px;
+        padding: 0 15px;
+    }
+    h2{
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        padding: 0 20px;
+    }
+    h3{
+        font-size: 1.7rem;
+        letter-spacing: 2px;
+        margin-top: 50px;
     }
     p,
     h3,
@@ -631,30 +692,135 @@ body.pagina-saliendo{
     ul{
         width: 88%;
     }
+    p{
+        font-size: 1rem;
+        line-height: 1.7;
+        text-align: left;
+    }
+    ul{
+        font-size: 1rem;
+    }
+    .destacado{
+        font-size: 1.5rem;
+        margin: 40px auto;
+    }
+    .frase{
+        font-size: 1.3rem;
+    }
+    .frase-calma{
+        font-size: 1.8rem;
+    }
+
+    /* IMAGENES */
+
+    .foto-portada{
+        width: 180px;
+    }
+    .foto-banda{
+        width: 92%;
+        height: 220px;
+        border-width: 6px;
+        margin-bottom: 35px;
+    }
+    .pagina-inicio .kintsugi img{
+        height: 240px;
+        border-width: 6px;
+    }
+    .pagina-moverse .galeria-moverse img,
+    .pagina-descansar .galeria-calma img{
+        height: 230px;
+        border-width: 6px;
+    }
+    .pagina-descansar .meditar{
+        width: 260px;
+    }
+
+    /* BOTON */
+
+    .boton-descarga{
+        width: 88%;
+        text-align: center;
+        padding: 14px 10px;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+
+    /* GRIDS EN UNA COLUMNA */
+
     .pagina-inicio .pilares,
     .pagina-moverse .rutina,
     .pagina-comer .recetas,
     .pagina-moverse .galeria-moverse,
-    .pagina-descansar .galeria-calma{
-        grid-template-columns: 1fr;
-    }
+    .pagina-descansar .galeria-calma,
     .pagina-inicio .kintsugi{
+        width: 88%;
         grid-template-columns: 1fr;
+        gap: 15px;
     }
     .pagina-inicio .tarjeta,
     .pagina-moverse .paso{
         height: auto;
     }
+    .pagina-inicio .tarjeta:hover{
+        transform: none;
+    }
+
+    /* PLATO */
+
+    .pagina-comer .plato{
+        width: 88%;
+        height: auto;
+        flex-direction: column;
+    }
+    .pagina-comer .plato div{
+        padding: 14px 18px;
+    }
+
+    /* RESPIRACION */
+
+    .pagina-descansar .respiracion{
+        width: 88%;
+        gap: 10px;
+    }
+    .pagina-descansar .respiracion div{
+        padding: 18px 5px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+    }
+    .pagina-descansar .respiracion strong{
+        font-size: 2.2rem;
+    }
+
+    /* SEMANA */
+
     .pagina-descansar .semana{
+        width: 88%;
         grid-template-columns: repeat(2, 1fr);
     }
-    .pagina-descansar .respiracion{
-        flex-direction: column;
+    .pagina-descansar .dia{
+        height: auto;
+        min-height: 100px;
     }
-    .foto-banda{
-        height: 230px;
+    .pagina-descansar .domingo{
+        grid-column: span 2;
     }
+
+    /* DESCARGA */
+
+    .pagina-descansar .descarga{
+        width: 88%;
+        padding: 25px 15px;
+    }
+
+    /* PIE */
+
     footer{
+        width: 88%;
         flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+    footer p{
+        text-align: center;
     }
 }
